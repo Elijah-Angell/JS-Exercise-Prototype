@@ -87,6 +87,7 @@ Person.prototype.toString = function(){
 
   Car.prototype.fill = function(){
     this.fill(gallons);
+    return gallons === tank
   }
   
   
@@ -102,9 +103,13 @@ Person.prototype.toString = function(){
   this.favoriteToy = favoriteToy;
   }
  
+  Baby.prototype =
+  Object.create(Person.prototype);
+
   Baby.prototype.play = function(){
     return `${this.name} is a ${this.species} and they are playing with their ${this.favoriteToy}`;
   }
+  
   
   /* 
     TASK 4
